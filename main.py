@@ -5,7 +5,7 @@ from random import randint
 class Building:
 
     def __init__(self):
-        super(Building, self).__init__()
+        super(Building, self).__init__()  # Не обязательно (инициализатор класса object)
         n = randint(5, 20)
         print(f"Created a building with {n} floors")
         self.number_of_floors = n
