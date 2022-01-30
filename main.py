@@ -112,8 +112,9 @@ class Building:
                     next_floor = self.elevator.floor + 1
                     # Если лифт полон
                     if len(self.elevator.passengers) == self.elevator.max_passengers:
+                        next_floor = self.elevator.passengers[0].target_floor
                         for passenger in self.elevator.passengers:
-                            if passenger.target_floor >= next_floor:
+                            if passenger.target_floor <= next_floor:
                                 next_floor = passenger.target_floor
                         print(f"Elevator is full and going up to {next_floor} floor")
 
@@ -128,8 +129,9 @@ class Building:
                     next_floor = self.elevator.floor - 1
                     # Если лифт полон
                     if len(self.elevator.passengers) == self.elevator.max_passengers:
+                        next_floor = self.elevator.passengers[0].targer_floor
                         for passenger in self.elevator.passengers:
-                            if passenger.target_floor <= next_floor:
+                            if passenger.target_floor >= next_floor:
                                 next_floor = passenger.target_floor
                         print(f"Elevator is full and going down to {next_floor} floor")
 
