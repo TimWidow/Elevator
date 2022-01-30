@@ -1,2 +1,3 @@
 # Elevator
-Test elevator simulator
+Test elevator simulator.
+Run main.py
