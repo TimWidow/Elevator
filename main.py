@@ -129,7 +129,7 @@ class Building:
                     next_floor = self.elevator.floor - 1
                     # Если лифт полон
                     if len(self.elevator.passengers) == self.elevator.max_passengers:
-                        next_floor = self.elevator.passengers[0].targer_floor
+                        next_floor = self.elevator.passengers[0].target_floor
                         for passenger in self.elevator.passengers:
                             if passenger.target_floor >= next_floor:
                                 next_floor = passenger.target_floor
@@ -172,10 +172,7 @@ class Passenger:
 if __name__ == '__main__':
     building = Building()
     pass_list = building.generate_simulation()
-
-    for p in range(len(pass_list)):
-        print(pass_list[p])
-
+    sleep(5)
     building.run_simulation(pass_list)
 
     print("End of simulation")
