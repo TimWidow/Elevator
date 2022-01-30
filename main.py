@@ -12,7 +12,7 @@ class Building:
         self.elevator = PassengerElevator(self.number_of_floors)
 
     def generate_simulation(self) -> list:
-        """Generates a new simulation with current configuration settings."""
+        """Создание новой симуляции."""
         passengers_list = []
 
         for i in range(1, self.number_of_floors + 1):
